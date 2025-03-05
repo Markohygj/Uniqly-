@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+        <div class="container-fluid">
+        <div class="row">
+            <!-- Навігація -->
+            <nav class="navbar col-md-2 d-flex flex-column align-items-start py-3">
+                <a class="navbar-brand ms-3" href="{% url 'post' %}">Uniqly</a>
+                <ul class="navbar-nav flex-column ms-3">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'post' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Bookmarks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+                </ul>
+                <a class="btn tweet-btn ms-3" href="{% url 'new_post' %}">Post</a>
+
+            </nav>
+            <div class="col-md-2 "></div>
+        <div class="col-md-8 p-4">
+    <div class="container">
+        <h1 class="mb-4">Edit Profile</h1>
+        <div class="post-card">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
