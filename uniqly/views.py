@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
 from .models import Post,Massage
-from .forms  import PostForm
+from .forms  import PostForm,MassageForm
 
 class PostListView(ListView):
     model = Post
@@ -22,4 +22,18 @@ class PostCreateView(CreateView):
 
 class MassageCreateViews(CreateView):
     model = Massage
-    template_name = "massage.html"
+    form_class = MassageForm
+    template_name = "massages.html"
+
+class ExploreListView(ListView):
+    model = Post
+    template_name = 'explore.html'
+
+class NotificationsListView(ListView):
+    model = Post
+    template_name = 'notifications.html'
+
+class MoreListView(ListView):
+    model = Post
+    template_name = 'more.html'
+

@@ -65,10 +65,22 @@
         .post-title {
             color: white;
         }
+        .user_link {
+            margin-top: 20px;
+
+            color: white;
+            border-radius: 50px;
+        }
 
         .avatar {
         width: 20px;
         height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+}
+        .avatar_list {
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         object-fit: cover;
 }
@@ -94,5 +106,50 @@
             border-radius: 10px;
         }
 
+        .avatar-user {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
+        .avatar_list {
+            width: 50px !important;
+            height: 50px !important;
+        }
+
+        .btn btn-submit{
+            margin-top: 20px;
+            background-color: #1d9bf0;
+            color: white;
+            border-radius: 50px;
+        }
+
+        @media (min-width: 1200px) {
+
+        }
+
+        @media (min-width: 992px) {
+
+        }
+
+        @media (min-width: 474``px) {
+            .col-md-8 p-4{
+            padding-top: 40%
+            }
+        }
+
+        }
+
+        @media (min-width: 480px) {
+
+        }
+
+        @media (min-width: 320px) {
+
+        }
+
+        .user_link{
+            color:white;
+        }
 
